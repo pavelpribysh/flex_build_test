@@ -15,6 +15,9 @@ module.exports = {
   },
   module: {
     rules: [{
+      test: /\.pug$/,
+      use: 'pug-loader'
+      },{
       test: /\.scss$/,
       use: 
       [
@@ -32,7 +35,7 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'templates/views/index.pug'
     })
   ],
   optimization: {

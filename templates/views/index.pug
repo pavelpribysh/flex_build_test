@@ -1,0 +1,12 @@
+extends ../_layout.pug
+
+block content
+  ul.news__container
+    - for(var i = 0; i < 5; i++)
+      li.news__item
+        div.news__img
+        div.news__text
+  aside.side-menu
+    ul.nav-items
+      - for(var i = 0; i < 5; i++)
+        li.nav-item
